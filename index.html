@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>MotionLab — Motion Graphic Studio</title>
+<title>MotionLab — Motion Graphic Studio maman</title>
 <style>
 :root{color-scheme:dark;--bg:#0b1020;--panel:#111a2e;--panel2:#17223a;--line:#283652;--text:#edf3ff;--muted:#9eacc6;--accent:#62e6bd;--blue:#72a7ff;--danger:#ff7b89}
 *{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 20% -10%,#1a2c4c 0,transparent 36%),var(--bg);color:var(--text);font:14px/1.5 Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,sans-serif}
@@ -13,7 +13,7 @@ header{display:flex;align-items:center;justify-content:space-between;gap:16px;pa
 main{max-width:1440px;margin:auto;padding:22px;display:grid;grid-template-columns:minmax(300px,.9fr) minmax(400px,1.25fr);gap:18px}
 .panel{background:linear-gradient(180deg,#121c31,#0f1729);border:1px solid var(--line);border-radius:17px;overflow:hidden;min-width:0}.panel-head{padding:16px 18px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;gap:10px}.panel-head h2{font-size:15px;margin:0}.sub{color:var(--muted);font-size:12px}.pad{padding:17px}
 label{display:block;color:#cbd6eb;font-weight:650;font-size:12px;margin-bottom:7px}.field{margin-bottom:14px}input,select,textarea{width:100%;background:#0a1222;color:var(--text);border:1px solid #30405e;border-radius:9px;padding:10px 11px;font:inherit;outline:none}input:focus,select:focus,textarea:focus{border-color:var(--accent);box-shadow:0 0 0 3px #62e6bd16}
-textarea{min-height:300px;resize:vertical;font:12px/1.6 ui-monospace,SFMono-Regular,Consolas,monospace;tab-size:2}.row{display:grid;grid-template-columns:1fr 1fr;gap:10px}.actions{display:flex;gap:8px;flex-wrap:wrap}.btn{border:1px solid #344663;background:#1a2943;color:var(--text);padding:10px 13px;border-radius:10px;font-weight:750;cursor:pointer;transition:.15s;font:inherit}.btn:hover{filter:brightness(1.15);transform:translateY(-1px)}.btn.primary{background:var(--accent);color:#071720;border-color:var(--accent)}.btn.blue{background:#6f9fff;color:#081326;border-color:#6f9fff}.btn:disabled{opacity:.5;cursor:not-allowed;transform:none}.hint{color:var(--muted);font-size:12px;margin:10px 0 0}.preview-wrap{padding:16px}.stage{position:relative;background:#050912;border:1px solid #2a3953;border-radius:12px;overflow:hidden;aspect-ratio:16/9;display:grid;place-items:center}.stage canvas{display:block;width:100%;height:100%;object-fit:contain}.stage-label{position:absolute;left:12px;top:10px;background:#080f1dc9;border:1px solid #ffffff22;padding:5px 8px;border-radius:7px;font-size:11px;color:#d7e4fb;pointer-events:none}
+textarea{min-height:300px;resize:vertical;font:12px/1.6 ui-monospace,SFMono-Regular,Consolas,monospace;tab-size:2}.row{display:grid;grid-template-columns:1fr 1fr;gap:10px}.actions{display:flex;gap:8px;flex-wrap:wrap}.btn{border:1px solid #344663;background:#1a2943;color:var(--text);padding:10px 13px;border-radius:10px;font-weight:750;cursor:pointer;transition:.15s;font:inherit}.btn:hover{filter:brightness(1.15);transform:translateY(-1px)}.btn.primary{background:var(--accent);color:#071720;border-color:var(--accent)}.btn.blue{background:#6f9fff;color:#081326;border-color:#6f9fff}.btn:disabled{opacity:.5;cursor:not-allowed;transform:none}.hint{color:var(--muted);font-size:12px;margin:10px 0 0}.preview-wrap{padding:16px}.stage{position:relative;background:#050912;border:1px solid #2a3953;border-radius:12px;overflow:hidden;aspect-ratio:16/9;display:grid;place-items:center}.stage canvas{display:block;width:100%;height:100%;object-fit:contain}.stage:fullscreen{width:100vw;height:100vh;aspect-ratio:auto;border:0;border-radius:0;background:#050912;display:grid;place-items:center}.stage:fullscreen canvas{width:100%;height:100%;object-fit:contain}.stage:fullscreen .stage-label{top:18px;left:18px}.stage-label{position:absolute;left:12px;top:10px;background:#080f1dc9;border:1px solid #ffffff22;padding:5px 8px;border-radius:7px;font-size:11px;color:#d7e4fb;pointer-events:none}
 .timeline{padding:0 17px 17px}.timeline-top{display:flex;justify-content:space-between;color:var(--muted);font-size:12px;margin:8px 0}.range{width:100%;accent-color:var(--accent);padding:0}.status{border:1px solid var(--line);border-radius:10px;padding:10px 12px;color:var(--muted);font-size:12px;margin-top:12px;min-height:40px}.status.ok{color:var(--accent);border-color:#286253}.status.error{color:var(--danger);border-color:#6d3440}.progress{height:5px;background:#202d45;border-radius:10px;overflow:hidden;margin-top:9px}.progress div{height:100%;width:0;background:linear-gradient(90deg,var(--accent),var(--blue));transition:width .15s}
 .notice{background:#142338;border:1px solid #2c4563;border-radius:10px;padding:11px 12px;color:#bdcce4;font-size:12px;margin-top:14px}.notice b{color:var(--text)}
 footer{max-width:1440px;margin:0 auto;padding:0 22px 26px;color:#8493ad;font-size:12px}
@@ -30,7 +30,7 @@ footer{max-width:1440px;margin:0 auto;padding:0 22px 26px;color:#8493ad;font-siz
     <div class="panel-head"><div><h2>Editor animasi</h2><div class="sub">Tulis JavaScript untuk menggambar setiap frame</div></div><span class="sub">JS · Canvas</span></div>
     <div class="pad">
       <div class="row">
-        <div class="field"><label for="width">Lebar video (px)</label><select id="width"><option value="1920">1920 · Full HD</option><option value="1280" selected>1280 · HD</option><option value="1080">1080 · Portrait</option><option value="1080sq">1080 · Square</option></select></div>
+        <div class="field"><label for="width">Rasio video</label><select id="width"><option value="16:9" selected>16:9 · Landscape (YouTube)</option><option value="9:16">9:16 · Portrait (TikTok/Reels)</option><option value="1:1">1:1 · Square</option><option value="4:3">4:3 · Klasik</option></select></div>
         <div class="field"><label for="fps">Frame rate</label><select id="fps"><option>24</option><option selected>30</option><option>60</option></select></div>
       </div>
       <div class="row">
@@ -49,13 +49,14 @@ footer{max-width:1440px;margin:0 auto;padding:0 22px 26px;color:#8493ad;font-siz
   <section class="panel">
     <div class="panel-head"><div><h2>Pratinjau</h2><div class="sub">Lihat animasi sebelum mengekspor</div></div><span class="sub" id="resolution">1280 × 720</span></div>
     <div class="preview-wrap">
-      <div class="stage"><canvas id="canvas" width="1280" height="720"></canvas><div class="stage-label">LIVE PREVIEW</div></div>
+      <div class="stage" id="stage"><canvas id="canvas" width="1280" height="720"></canvas><div class="stage-label">LIVE PREVIEW</div></div>
     </div>
     <div class="timeline">
       <div class="actions">
         <button class="btn blue" id="play">▶ Putar</button>
         <button class="btn" id="pause">Ⅱ Jeda</button>
         <button class="btn" id="restart">↺ Ulang</button>
+        <button class="btn" id="fullscreen">⛶ Full screen</button>
         <button class="btn primary" id="export">⬇ Ekspor MP4</button>
       </div>
       <div class="timeline-top"><span id="timeLabel">00:00 / 00:12</span><span id="frameLabel">30 FPS</span></div>
@@ -120,10 +121,12 @@ const scrub=document.getElementById('scrub'),statusEl=document.getElementById('s
 let drawFn=null, playing=false, startAt=performance.now(), currentTime=0, lastFrame=0, exportBusy=false;
 codeEl.value=starterCode;
 function dims(){
- const v=document.getElementById('width').value;
- if(v==='1080sq')return [1080,1080];
- if(v==='1080')return [1080,1920];
- const w=Number(v);return [w,Math.round(w*9/16)];
+ const ratio=document.getElementById('width').value;
+ // Ukuran ekspor praktis untuk setiap rasio.
+ if(ratio==='9:16') return [720,1280];
+ if(ratio==='1:1') return [1080,1080];
+ if(ratio==='4:3') return [1440,1080];
+ return [1280,720]; // 16:9
 }
 function duration(){return Math.max(2,Math.min(60,Number(durationEl.value)||12))}
 function fmt(t){const s=Math.max(0,Math.floor(t));return String(Math.floor(s/60)).padStart(2,'0')+':'+String(s%60).padStart(2,'0')}
@@ -137,8 +140,22 @@ function compile(){
 }
 function renderAt(t){
  currentTime=Math.max(0,Math.min(duration(),t));
- try{if(drawFn)drawFn(ctx,currentTime,canvas.width,canvas.height);else {ctx.fillStyle='#07111f';ctx.fillRect(0,0,canvas.width,canvas.height)}}
- catch(e){playing=false;setStatus('Error saat animasi: '+e.message,'error')}
+ try{
+  if(drawFn)drawFn(ctx,currentTime,canvas.width,canvas.height);
+  else {ctx.fillStyle='#07111f';ctx.fillRect(0,0,canvas.width,canvas.height)}
+  // Watermark ringan ikut masuk ke hasil ekspor video.
+  const w=canvas.width, h=canvas.height;
+  ctx.save();
+  ctx.globalAlpha=0.32;
+  ctx.fillStyle='#ffffff';
+  ctx.font=`500 ${Math.max(16,w*0.022)}px Arial, sans-serif`;
+  ctx.textAlign='right';
+  ctx.textBaseline='bottom';
+  ctx.shadowColor='rgba(0,0,0,.35)';
+  ctx.shadowBlur=Math.max(2,w*0.002);
+  ctx.fillText('maman',w*0.965,h*0.945);
+  ctx.restore();
+ }catch(e){playing=false;setStatus('Error saat animasi: '+e.message,'error')}
  scrub.value=currentTime;document.getElementById('timeLabel').textContent=fmt(currentTime)+' / '+fmt(duration());
 }
 function tick(now){
@@ -213,6 +230,18 @@ async function exportVideo(){
  }
 }
 function downloadBlob(blob,name){const url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download=name;document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),60000)}
+document.getElementById('fullscreen').onclick=async()=>{
+ const stage=document.getElementById('stage');
+ try{
+  if(!document.fullscreenElement){
+   if(stage.requestFullscreen) await stage.requestFullscreen();
+   else setStatus('Mode full screen tidak didukung browser ini.','error');
+  }else if(document.exitFullscreen) await document.exitFullscreen();
+ }catch(e){setStatus('Gagal membuka full screen: '+e.message,'error')}
+};
+document.addEventListener('fullscreenchange',()=>{
+ document.getElementById('fullscreen').textContent=document.fullscreenElement?'⛶ Keluar full screen':'⛶ Full screen';
+});
 document.getElementById('export').onclick=exportVideo;
 compile();setCanvasSize();renderAt(0);
 </script>
