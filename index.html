@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>MotionLab — Motion Graphic Studio maman</title>
+<title>MotionLab — Motion Graphic Studio</title>
 <style>
 :root{color-scheme:dark;--bg:#0b1020;--panel:#111a2e;--panel2:#17223a;--line:#283652;--text:#edf3ff;--muted:#9eacc6;--accent:#62e6bd;--blue:#72a7ff;--danger:#ff7b89}
 *{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 20% -10%,#1a2c4c 0,transparent 36%),var(--bg);color:var(--text);font:14px/1.5 Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,sans-serif}
@@ -34,7 +34,7 @@ footer{max-width:1440px;margin:0 auto;padding:0 22px 26px;color:#8493ad;font-siz
         <div class="field"><label for="fps">Frame rate</label><select id="fps"><option>24</option><option selected>30</option><option>60</option></select></div>
       </div>
       <div class="row">
-        <div class="field"><label for="duration">Durasi (detik)</label><input id="duration" type="number" min="2" max="60" value="12"></div>
+        <div class="field"><label for="duration">Durasi (detik)</label><input id="duration" type="number" min="2" max="180" value="93"></div>
         <div class="field"><label for="filename">Nama file</label><input id="filename" value="motion-graphic" maxlength="60"></div>
       </div>
       <div class="field"><label for="code">Kode animasi</label><textarea id="code" spellcheck="false"></textarea></div>
@@ -128,7 +128,7 @@ function dims(){
  if(ratio==='4:3') return [1440,1080];
  return [1280,720]; // 16:9
 }
-function duration(){return Math.max(2,Math.min(60,Number(durationEl.value)||12))}
+function duration(){return Math.max(2,Math.min(180,Number(durationEl.value)||93))}
 function fmt(t){const s=Math.max(0,Math.floor(t));return String(Math.floor(s/60)).padStart(2,'0')+':'+String(s%60).padStart(2,'0')}
 function setStatus(msg,type=''){statusEl.className='status '+type;statusEl.textContent=msg}
 function setCanvasSize(){const [w,h]=dims();canvas.width=w;canvas.height=h;const stage=document.getElementById('stage');stage.style.aspectRatio=w+' / '+h;document.getElementById('resolution').textContent=w+' × '+h;scrub.max=duration();document.getElementById('frameLabel').textContent=fpsEl.value+' FPS';renderAt(currentTime)}
